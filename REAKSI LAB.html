@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>REAKSI LAB</title>
+<style>
+:root{--n:#0a1f44;--b:#2f7df6;--c:#22d3ee;--o:#f59e0b;--bg:#f4f8ff;--cd:#fff;--t:#10213f;--m:#55657f;--ln:#dbe6f7;--ok:#0b7d45;--no:#c5221f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1426;--cd:#13203a;--t:#e8eefb;--m:#a5b6d4;--ln:#25375a;--ok:#4ade80;--no:#ff8a80}}
+:root[data-theme="dark"]{--bg:#0b1426;--cd:#13203a;--t:#e8eefb;--m:#a5b6d4;--ln:#25375a;--ok:#4ade80;--no:#ff8a80}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--t);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--b)}nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--n);display:flex;align-items:center;gap:14px;padding:10px 20px;flex-wrap:wrap}
+.logo{color:#fff;font-weight:800;font-size:20px;text-decoration:none}.logo b{color:var(--c)}
+nav .lk{display:flex;gap:4px;flex:1;justify-content:center;flex-wrap:wrap}nav .lk a{color:#cfe0ff;text-decoration:none;padding:8px 10px;border-radius:8px;font-size:14px}nav .lk a.on,nav .lk a:hover{color:#fff;background:#ffffff1f}
+#hb{display:none;background:none;border:1px solid #fff6;color:#fff;border-radius:8px;padding:6px 10px;font-size:20px;margin-left:auto}
+.btn{background:var(--c);color:#06203f;border:0;border-radius:999px;padding:11px 22px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;font-size:15px}
+.btn.g{background:transparent;border:1.5px solid var(--b);color:var(--b)}.btn.w{background:transparent;border:1.5px solid #fff;color:#fff}
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,.chip:focus-visible{outline:3px solid var(--o);outline-offset:2px}
+main{max-width:1050px;margin:0 auto;padding:24px 16px}
+.hero{position:relative;background:linear-gradient(135deg,#071530,#0f3a7a);color:#fff;overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.55}.hero .in{position:relative;max-width:1050px;margin:auto;padding:70px 16px}
+.hero h1{font-size:clamp(40px,8vw,72px);margin:0;line-height:1}.hero h1 b{color:var(--c)}.hero .tg{color:var(--c);font-size:22px;font-weight:600;margin:10px 0}
+.hero p{max-width:560px}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:10px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.card{background:var(--cd);border:1px solid var(--ln);border-radius:14px;padding:18px;margin:14px 0}.grid .card{margin:0}
+h2{margin:6px 0 4px}h3{margin:0 0 6px}.sm{font-size:13px;color:var(--m)}.tag{display:inline-block;background:#22d3ee33;color:var(--b);border-radius:999px;padding:2px 10px;font-size:12px;font-weight:700}
+.bar{height:10px;background:var(--ln);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--b),var(--c));transition:width .5s}
+canvas.sc{width:100%;max-width:600px;border-radius:12px;display:block}
+.op{display:block;padding:8px 10px;border:1px solid var(--ln);border-radius:10px;margin:6px 0;cursor:pointer}
+.in{padding:9px;border-radius:8px;border:1px solid var(--m);background:var(--cd);color:var(--t);font-size:15px;margin:4px 4px 4px 0}
+.fb{margin-top:10px;padding:10px;border-radius:10px;display:none}.fb.good{display:block;border-left:5px solid var(--ok);background:#0b7d4518}.fb.bad{display:block;border-left:5px solid var(--no);background:#c5221f14}
+.tb{border-collapse:collapse;width:100%}.tb td,.tb th{border:1px solid var(--ln);padding:8px;text-align:center}
+.chip{display:inline-block;padding:8px 14px;border-radius:10px;background:var(--n);color:#fff;margin:4px;cursor:pointer;user-select:none;border:2px solid transparent}.chip.sel{border-color:var(--o)}
+.zn{padding:10px;border:2px dashed var(--b);border-radius:10px;margin:6px 0;cursor:pointer}
+svg text{fill:var(--t);font-size:11px}.hit{fill:transparent;cursor:pointer}.hit:hover{fill:#f59e0b44}
+footer{background:var(--n);color:#cfe0ff;padding:24px 20px 12px;margin-top:30px}footer .f{max-width:1050px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:#cfe0ff;margin-right:12px;text-decoration:none}footer .cr{text-align:right;font-size:12px;max-width:1050px;margin:14px auto 0;color:#9db4de}
+.toast{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--o);color:#201400;padding:10px 16px;border-radius:10px;font-weight:700;z-index:20}
+.refs a{word-break:break-all}input[type=range]{width:100%;max-width:340px}
+@media(max-width:820px){#hb{display:block}nav .lk{display:none;width:100%;flex-direction:column}nav .lk.open{display:flex}nav .btn{display:none}}
+</style></head><body>
+<nav><a class="logo" href="#/home">⚛ REAKSI <b>LAB</b></a><button id="hb" aria-label="Menu">☰</button><div class="lk" id="lk"></div><a class="btn" href="#/map">Mulai Belajar</a></nav>
+<div id="app"></div>
+<footer><div class="f"><div><b style="color:#fff">REAKSI LAB</b><br><span class="sm" style="color:#9db4de">Interactive Learning Environment for Reaction Rate</span></div><div><a href="#/home">Beranda</a><a href="#/map">Materi</a><a href="#/lab">Laboratorium</a><a href="#/games">Games</a><a href="#/eval">Evaluasi</a></div></div><div class="cr">@Nextto Krisman Waruwu</div></footer>
+<script>
+const $=(s,e=document)=>e.querySelector(s),$$=(s,e=document)=>[...e.querySelectorAll(s)];
+let S;try{S=JSON.parse(localStorage.getItem('rl')||'')}catch(e){}S=S||{xp:0,d:{},ev:null};
+const sv=()=>{try{localStorage.setItem('rl',JSON.stringify(S))}catch(e){}};
+function toast(m){const t=document.createElement('div');t.className='toast';t.textContent=m;document.body.append(t);setTimeout(()=>t.remove(),1800)}
+const done=(id,xp)=>{if(!S.d[id]){S.d[id]=1;S.xp+=xp;sv();toast('+'+xp+' XP')}};
+const R=[['OpenStax. 2019. Chemistry 2e (Bab 12: Kinetics). OpenStax.','https://openstax.org/details/books/chemistry-2e'],['IUPAC. Compendium of Chemical Terminology (the "Gold Book"): entri activation energy, catalyst, rate law, order of reaction.','https://goldbook.iupac.org']];
+const MD=[
+{t:'Teori Tumbukan',d:'Memahami bagaimana tumbukan antarpartikel menghasilkan reaksi.',i:'⚛️',a:['read1','sim','game'],c:[['Pengertian','Reaksi terjadi ketika partikel pereaksi bertumbukan. Tidak semua tumbukan menghasilkan produk.'],['Gerakan partikel','Partikel selalu bergerak acak. Makin tinggi suhu, makin cepat geraknya.'],['Tumbukan antarpartikel','Dua partikel bertemu lalu saling memantul atau bereaksi.'],['Tumbukan efektif','Tumbukan yang menghasilkan reaksi: energi cukup DAN orientasi tepat.'],['Energi tumbukan','Energi kinetik harus mencapai batas minimum agar ikatan lama putus.'],['Orientasi tumbukan','Bagian partikel yang bertemu harus sesuai. Orientasi salah → hanya memantul.'],['Energi aktivasi (Ea)','Energi minimum agar tumbukan menghasilkan reaksi.'],['Kaitan dengan laju','Laju reaksi bergantung pada banyaknya tumbukan efektif per satuan waktu.']]},
+{t:'Faktor Laju Reaksi',d:'Konsentrasi, luas permukaan, suhu, dan katalis.',i:'🧪',a:['conc','surf','temp','cat'],c:[['Apa itu faktor laju?','Laju reaksi dipengaruhi konsentrasi, luas permukaan, suhu, dan katalis. Semuanya bekerja lewat tumbukan efektif.'],['Konsentrasi','Konsentrasi besar berarti partikel per satuan volume banyak, sehingga tumbukan lebih sering.'],['Luas permukaan','Padatan berukuran kecil punya permukaan lebih luas, sehingga lebih banyak partikel dapat bertumbukan.'],['Suhu','Suhu naik → partikel bergerak lebih cepat → lebih banyak tumbukan berenergi ≥ Ea.'],['Katalis','Zat yang mempercepat reaksi lewat jalur dengan Ea lebih rendah, tanpa habis bereaksi.'],['Faktor mana yang mengubah Ea?','Hanya katalis yang menurunkan Ea. Faktor lain mengubah frekuensi atau energi tumbukan.'],['Satu pola','Semua faktor → tumbukan efektif per detik naik → laju naik.'],['Cara belajar','Gunakan simulator di bawah. Ubah satu variabel saja setiap kali (variabel kontrol).']]},
+{t:'Energi Aktivasi',d:'Memahami energi aktivasi dan peran katalis.',i:'📈',a:['graph','why'],c:[['Grafik energi potensial','Grafik menunjukkan perubahan energi selama reaksi. Sumbu x: koordinat reaksi, sumbu y: energi potensial.'],['Energi pereaksi & produk','Tingkat energi awal (pereaksi) dan akhir (produk) ditunjukkan dataran di kiri dan kanan kurva.'],['Energi aktivasi (Ea)','Selisih energi puncak dan energi pereaksi: Ea = E puncak − E pereaksi.'],['ΔH reaksi','ΔH = E produk − E pereaksi. Negatif: eksotermik; positif: endotermik.'],['Keadaan transisi','Puncak kurva adalah keadaan peralihan: ikatan lama melemah dan ikatan baru mulai terbentuk.'],['Peran katalis','Katalis membuka jalur alternatif dengan puncak lebih rendah, sehingga Ea turun.'],['ΔH tidak berubah','Energi pereaksi dan produk tetap sama, sehingga ΔH tidak diubah oleh katalis.'],['Mengapa lebih cepat?','Ea lebih rendah → lebih banyak partikel berenergi cukup → tumbukan efektif naik → laju naik.']]},
+{t:'Hukum Laju',d:'Memahami hubungan konsentrasi dan laju reaksi.',i:'📄',a:['read4','match','eq'],c:[['Laju reaksi','Perubahan konsentrasi pereaksi/produk per satuan waktu (M/s).'],['Hukum laju','Persamaan yang menghubungkan laju dengan konsentrasi pereaksi.'],['Bentuk umum','v = k[A]ᵐ[B]ⁿ — ditentukan dari eksperimen, bukan dari koefisien reaksi.'],['Arti simbol','v = laju, k = konstanta laju, m = orde terhadap A, n = orde terhadap B, m+n = orde total.'],['Orde nol','[A] naik 2× → laju tetap.'],['Orde satu','[A] naik 2× → laju naik 2×.'],['Orde dua','[A] naik 2× → laju naik 2² = 4×.'],['Konsentrasi & laju','Orde menunjukkan seberapa kuat laju dipengaruhi konsentrasi.']]},
+{t:'Analisis Data Reaksi',d:'Menentukan orde, persamaan laju, dan konstanta laju.',i:'📊',a:['lab','kcalc'],c:[['Mengapa butuh data?','Orde reaksi tidak bisa ditebak dari koefisien reaksi; harus ditentukan dari eksperimen.'],['Variabel kontrol','Bandingkan dua percobaan yang hanya mengubah satu konsentrasi.'],['Langkah menentukan orde','Cari faktor perubahan konsentrasi dan faktor perubahan laju, lalu cocokkan.'],['Hubungan faktor','(faktor konsentrasi)ᵐ = faktor laju. Contoh: 2ᵐ = 4 → m = 2.'],['Orde total','Jumlahkan semua orde: m + n.'],['Persamaan laju','Susun v = k[A]ᵐ[B]ⁿ dengan m dan n dari hasil analisis.'],['Menghitung k','k = v / ([A]ᵐ[B]ⁿ), memakai data satu percobaan.'],['Satuan k','Satuan k bergantung pada orde total: M^(1−(m+n)) s⁻¹.']]}];
+const ACT=MD.flatMap(m=>m.a);
+const mp=i=>MD[i].a.filter(a=>S.d[a]).length/MD[i].a.length;
+const st=p=>p==0?'Belum dimulai':p==1?'Selesai':'Sedang dipelajari';
+
+// engine
+function sim(cv,P,cb){const c=cv.getContext('2d'),W=cv.width,H=cv.height,ps=[],fl=[];let col=0,ef=0,key='',last='';
+(function f(){if(!cv.isConnected)return;const p=P(),k=JSON.stringify(p);if(k!=key){key=k;col=ef=0;last=''}
+while(ps.length<p.n)ps.push({x:Math.random()*W,y:Math.random()*H,a:Math.random()*6.28,k:ps.length%2,cd:0});ps.length=p.n;
+c.fillStyle='#071530';c.fillRect(0,0,W,H);
+ps.forEach(q=>{const s=p.v*1.5;q.x+=Math.cos(q.a)*s;q.y+=Math.sin(q.a)*s;if(q.x<7||q.x>W-7){q.a=Math.PI-q.a;q.x=Math.min(W-7,Math.max(7,q.x))}if(q.y<7||q.y>H-7){q.a=-q.a;q.y=Math.min(H-7,Math.max(7,q.y))}q.cd--});
+for(let i=0;i<ps.length;i++)for(let j=i+1;j<ps.length;j++){const a=ps[i],b=ps[j];if(a.cd>0||b.cd>0||Math.hypot(a.x-b.x,a.y-b.y)>14)continue;
+col++;const ori=Math.random()<.5,en=p.E+Math.random()*4-2>=6,e=ori&&en;if(e)ef++;
+last=e?'EFEKTIF — energi cukup dan orientasi tepat':'TIDAK EFEKTIF — '+(!en&&!ori?'energi kurang & orientasi salah':!en?'energi kurang dari Ea':'orientasi salah');
+fl.push({x:(a.x+b.x)/2,y:(a.y+b.y)/2,e,t:25});a.cd=b.cd=20;a.a+=2.5;b.a-=2.5}
+ps.forEach(q=>{c.fillStyle=q.k?'#f59e0b':'#38a1ff';c.beginPath();c.arc(q.x,q.y,6,0,6.3);c.fill()});
+fl.forEach((x,i)=>{c.strokeStyle=x.e?'#22d3ee':'#fff';c.lineWidth=x.e?3:1.5;c.beginPath();c.arc(x.x,x.y,x.e?20-x.t/2:10+(25-x.t)/3,0,6.3);c.stroke();x.t--});
+for(let i=fl.length-1;i>=0;i--)if(fl[i].t<0)fl.splice(i,1);
+if(cb)cb(col,ef,last);requestAnimationFrame(f)})()}
+function simUI(box,ctrls,mk,onC){const V={};box.innerHTML=ctrls.map(([id,l,mn,mx,v,s,u])=>{V[id]=v;return`<label for="${id}">${l}: <b id="o${id}">${v}${u||''}</b></label><br><input type="range" id="${id}" min="${mn}" max="${mx}" value="${v}" step="${s}"><br>`}).join('')+`<canvas class="sc" width="600" height="300" aria-label="Simulasi partikel"></canvas><p class="sm">Data Simulasi · <span class="stt"></span></p><p><b class="ls" role="status">Menunggu tumbukan…</b></p>`;
+ctrls.forEach(([id,,,,,,u])=>$('#'+id,box).oninput=e=>{V[id]=+e.target.value;$('#o'+id,box).textContent=e.target.value+(u||'')});
+sim($('canvas',box),()=>mk(V),(c,e,l)=>{$('.stt',box).textContent=`Tumbukan: ${c} · Efektif: ${e} (${c?Math.round(e/c*100):0}%)`;$('.ls',box).textContent=l||'Menunggu tumbukan…';onC&&onC(c)})}
+
+// quiz
+function Q(q,box,cb){const hs=(q.h||'').split('|');let hi=0,ok=0;
+box.innerHTML=`<p><b>${q.p}</b></p><div class="qi"></div><div class="row"><button class="btn bk">Periksa Jawaban</button><button class="btn g bh">Lihat Petunjuk</button><a class="btn g" href="${q.l||'#/map'}">Pelajari Konsep</a></div><div class="fb" role="status" aria-live="polite"></div>`;
+const qi=$('.qi',box),fb=$('.fb',box),idn='q'+Math.random();
+if(q.t=='mc')qi.innerHTML=q.o.map((o,i)=>`<label class="op"><input type="radio" name="${idn}" value="${i}"> ${o}</label>`).join('');
+if(q.t=='num')qi.innerHTML=`<input class="in" inputmode="decimal" aria-label="Jawaban angka" placeholder="Jawaban"> ${q.u||''}`;
+if(q.t=='fill')qi.innerHTML=q.f.map((o,j)=>`<select class="in" aria-label="Isian ${j+1}"><option value="-1">— pilih —</option>${o.map((x,i)=>`<option value="${i}">${x}</option>`).join('')}</select>`).join(' ');
+const hint=()=>{if(hs[0]){const x=hs[Math.min(hi++,hs.length-1)];fb.className='fb bad';fb.innerHTML=(fb.dataset.w||'')+'<b>Petunjuk:</b> '+x}};
+$('.bh',box).onclick=hint;
+$('.bk',box).onclick=e=>{if(ok)return;let g;
+if(q.t=='mc'){const r=$('input:checked',qi);if(!r)return;g=+r.value==q.a}
+if(q.t=='num')g=Math.abs(parseFloat($('input',qi).value.replace(',','.'))-q.a)<=(q.tol||1e-6);
+if(q.t=='fill')g=$$('select',qi).every((s,j)=>+s.value==q.a[j]);
+if(g){ok=1;fb.className='fb good';fb.innerHTML='✓ Tepat!<br>'+q.ok;cb&&cb(1)}
+else if(q.once){ok=1;fb.className='fb bad';fb.innerHTML='✗ Belum tepat.<br>'+q.ok;cb&&cb(0)}
+else{fb.dataset.w='✗ Belum tepat. '+(q.w||'Perhatikan kembali konsepnya.')+'<br>';hint();e.target.textContent='Coba Lagi'}}}
+
+// graph
+function graph(box,click,cb){box.innerHTML=`<svg viewBox="0 0 400 240" role="img" aria-label="Grafik energi potensial terhadap koordinat reaksi" style="width:100%;max-width:560px"><line x1="40" y1="10" x2="40" y2="210" stroke="#888"/><line x1="40" y1="210" x2="390" y2="210" stroke="#888"/><text x="10" y="120" transform="rotate(-90 14 120)">Energi potensial (kJ)</text><text x="150" y="230">Koordinat reaksi</text>
+<path d="M40,150H90C130,150 140,40 200,40C260,40 270,190 310,190H380" fill="none" stroke="#2f7df6" stroke-width="3"/>
+<path class="cat" d="M40,150H90C130,150 150,95 200,95C250,95 270,190 310,190H380" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="6 3"/>
+<line x1="170" y1="150" x2="170" y2="40" stroke="#2f7df6"/><text x="120" y="100">Ea (tanpa)</text>
+<g class="cat"><line x1="235" y1="150" x2="235" y2="95" stroke="#f59e0b"/><text x="240" y="125">Ea (katalis)</text></g>
+<line x1="350" y1="150" x2="350" y2="190" stroke="#888"/><text x="355" y="173">ΔH</text><text x="42" y="144">Pereaksi</text><text x="316" y="204">Produk</text>
+<text x="230" y="30" style="fill:#2f7df6">— tanpa katalis</text><g class="cat"><text x="300" y="30" style="fill:#b97700">-- dengan katalis</text></g>
+${click?`<rect class="hit" id="er" x="40" y="135" width="60" height="25"/><rect class="hit" id="ep" x="310" y="178" width="60" height="25"/><rect class="hit" id="ea0" x="158" y="40" width="24" height="110"/><rect class="hit" id="ea1" x="222" y="95" width="24" height="55"/><rect class="hit" id="dh" x="338" y="150" width="26" height="40"/>`:''}</svg><p class="sm">Data Simulasi · reaksi eksotermik (ΔH &lt; 0)</p>`;
+if(!click)return;const T=[['ea0','Ea tanpa katalis (garis biru)'],['ea1','Ea dengan katalis (garis oranye putus-putus)'],['er','energi pereaksi'],['ep','energi produk'],['dh','ΔH']];let i=0;
+box.insertAdjacentHTML('beforeend','<p><b id="tk"></b></p><p id="gf" role="status"></p>');const sh=()=>$('#tk',box).textContent=i<5?`Tugas ${i+1}/5: klik ${T[i][1]}`:'Semua tugas selesai ✓';sh();
+$$('.hit',box).forEach(r=>r.onclick=()=>{if(i>4)return;if(r.id==T[i][0]){r.style.fill='#0b7d4555';$('#gf',box).textContent='✓ Tepat! '+T[i][1]+' teridentifikasi.';i++;sh();if(i==5){done('graph',50);cb&&cb()}}else $('#gf',box).textContent='✗ Belum tepat. Petunjuk: Ea adalah selisih energi puncak dan pereaksi; ΔH adalah selisih produk dan pereaksi.'})}
+
+// helpers
+const sec=(h,cls='')=>{const d=document.createElement('section');d.className='card '+cls;d.innerHTML=h;return d};
+const cards=(c)=>`<div class="grid">${c.map(([a,b],i)=>`<div class="card"><span class="tag">${i+1}</span><h3>${a}</h3><p>${b}</p></div>`).join('')}</div>`;
+const refs=()=>sec(`<h3>📚 Sumber Belajar</h3><ul class="refs">${R.map(r=>`<li>${r[0]} <a href="${r[1]}" target="_blank" rel="noopener">${r[1]}</a></li>`).join('')}</ul><p class="sm">Materi ditulis ulang secara pedagogis untuk kelas XI.</p>`);
+const head=(i)=>sec(`<span class="tag">MODUL 0${i+1}</span><h2>${MD[i].t.toUpperCase()}</h2><p>${MD[i].d}</p><div class="bar"><i style="width:${mp(i)*100}%"></i></div>`);
+const ok=(m)=>m;
+
+function match(box){const it=[['[A] naik 2× → laju tetap',0],['[A] naik 2× → laju naik 2×',1],['[A] naik 2× → laju naik 4×',2],['[A] naik 3× → laju naik 3×',1]],V={};let sel=null;
+box.innerHTML=`<h3>Rate Law Game</h3><p class="sm">Seret (atau pilih lalu klik) orde ke tiap pernyataan.</p><div>${[0,1,2].map(i=>`<span class="chip" tabindex="0" draggable="true" data-v="${i}">Orde ${i}</span>`).join('')}</div>${it.map((x,i)=>`<div class="zn" tabindex="0" data-i="${i}">${x[0]} → <b>…</b></div>`).join('')}<button class="btn">Periksa</button><p id="mr" role="status"></p>`;
+const put=(z,v)=>{V[z.dataset.i]=+v;$('b',z).textContent='Orde '+v};
+$$('.chip',box).forEach(c=>{c.onclick=()=>{$$('.chip',box).forEach(x=>x.classList.remove('sel'));c.classList.add('sel');sel=c.dataset.v};c.onkeydown=e=>e.key=='Enter'&&c.click();c.ondragstart=e=>e.dataTransfer.setData('text',c.dataset.v)});
+$$('.zn',box).forEach(z=>{z.onclick=()=>sel!==null&&put(z,sel);z.onkeydown=e=>e.key=='Enter'&&z.click();z.ondragover=e=>e.preventDefault();z.ondrop=e=>{e.preventDefault();put(z,e.dataTransfer.getData('text'))}});
+$('.btn',box).onclick=()=>{let s=0,w=[];it.forEach((x,i)=>V[i]===x[1]?s+=10:w.push(i+1));$('#mr',box).innerHTML=`Skor: ${s}/40 ${w.length?'· ✗ Periksa lagi pernyataan nomor '+w.join(', ')+'. Petunjuk: orde n berarti laju naik (faktor naik)ⁿ kali.':'· ✓ Tepat! Semua pasangan benar.'}`;if(!w.length)done('match',30)}}
+function eqb(box){const T=['v','=','k','[A]','[B]','^1','^2'].sort(()=>Math.random()-.5);let cur=[];
+box.innerHTML=`<h3>Equation Builder</h3><p class="sm">Susun hukum laju untuk data percobaan: orde A = 1, orde B = 2.</p><div>${T.map(t=>`<span class="chip" tabindex="0">${t.replace('^1','pangkat 1').replace('^2','pangkat 2')}</span>`).join('')}</div><p><b id="ed" style="font-size:22px">…</b></p><div class="row"><button class="btn g" id="eu">Hapus</button><button class="btn" id="ec">Periksa</button></div><p id="ef" role="status"></p>`;
+const sh=()=>$('#ed',box).textContent=cur.join(' ').replace(' ^','^').replace(/\^2/g,'²').replace(/\^1/g,'¹')||'…';
+$$('.chip',box).forEach((c,i)=>{c.onclick=()=>{cur.push(T[i]);sh()};c.onkeydown=e=>e.key=='Enter'&&c.click()});$('#eu',box).onclick=()=>{cur=[];sh()};
+$('#ec',box).onclick=()=>{const s=cur.filter(x=>x!='^1').join('|');if(s=='v|=|k|[A]|[B]|^2'){$('#ef',box).textContent='✓ Tepat! v = k[A][B]² — orde total 3.';done('eq',30)}else $('#ef',box).textContent='✗ Belum tepat. Petunjuk: urutan v = k diikuti [A] lalu [B]; hanya pereaksi dengan orde ≠ 1 yang diberi pangkat.'}}
+function coll(box){let n=0,tot=0;const sc=[['tinggi','tepat'],['rendah','tepat'],['tinggi','salah'],['rendah','salah'],['tinggi','tepat'],['tinggi','salah']].sort(()=>Math.random()-.5).slice(0,5);let sco=0;
+const r=()=>{if(n>=5){box.innerHTML=`<h3>Collision Challenge</h3><p><b>Skor: ${sco}/5</b></p><button class="btn" id="rs">Main lagi</button>`;done('game',50);$('#rs',box).onclick=()=>coll(box);return}
+const [e,o]=sc[n];box.innerHTML=`<h3>Collision Challenge · ${n+1}/5</h3><p>Dua partikel bertumbukan. Energi tumbukan: <b>${e}</b> (${e=='tinggi'?'≥ Ea':'< Ea'}). Orientasi: <b>${o}</b> ${o=='tepat'?'⟶⟵ sisi reaktif bertemu':'⟶ ⟵ sisi tidak reaktif'}.</p><canvas width="300" height="70" class="sc" aria-hidden="true"></canvas><div class="row"><button class="btn" data-a="1">Tumbukan Efektif</button><button class="btn g" data-a="0">Tumbukan Tidak Efektif</button></div><p id="gm" role="status"></p>`;
+const c=$('canvas',box).getContext('2d');c.fillStyle='#071530';c.fillRect(0,0,300,70);c.fillStyle='#38a1ff';c.beginPath();c.arc(e=='tinggi'?110:60,35,18,0,6.3);c.fill();c.fillStyle='#f59e0b';c.beginPath();c.arc(e=='tinggi'?190:240,35,18,0,6.3);c.fill();c.fillStyle='#fff';c.fillRect(e=='tinggi'?124:74,o=='tepat'?30:10,10,8);
+$$('button',box).forEach(b=>b.onclick=()=>{const g=(e=='tinggi'&&o=='tepat')==!!+b.dataset.a;if(g)sco++;$('#gm',box).innerHTML=(g?'✓ Tepat! ':'✗ Belum tepat. ')+`Efektif hanya jika energi ≥ Ea <i>dan</i> orientasi tepat. Di sini: energi ${e}, orientasi ${o}. <button class="btn" id="nx">Lanjut</button>`;$$('[data-a]',box).forEach(x=>x.disabled=true);$('#nx',box).onclick=()=>{n++;r()}})};r()}
+
+function lab(box){const E=[[.1,.1,.02],[.2,.1,.04],[.1,.2,.08]],f=x=>String(x).replace('.',',');
+box.innerHTML=`<h3>Experimental Data Lab</h3><table class="tb"><tr><th>Percobaan</th><th>[A] (M)</th><th>[B] (M)</th><th>Laju (M/s)</th></tr>${E.map((r,i)=>`<tr><td>${i+1}</td>${r.map(x=>`<td>${f(x)}</td>`).join('')}</tr>`).join('')}</table><p class="sm">Data Simulasi (bukan data penelitian nyata). Selesaikan tiap langkah; gunakan petunjuk bertahap bila perlu.</p><div id="sp"></div>`;
+const P=['1','2','3'],V=['[A]','[B]','Laju'];const S_=[];
+[['A',[0,1],0,1,1],['B',[0,2],1,2,2]].forEach(([X,pr,vi,fac,ord])=>{const pa=`percobaan ${pr[0]+1} dan ${pr[1]+1}`;S_.push(
+{t:'fill',f:[P,P],a:pr,p:`STEP 1 (orde ${X}): pilih dua percobaan yang hanya mengubah [${X}].`,h:`Cari dua baris yang konsentrasi lainnya sama.|Untuk [${X}], bandingkan ${pa}.`,ok:'Tepat, hanya [${X}] yang berubah.'.replace('${X}',X)},
+{t:'mc',o:V,a:vi,p:`STEP 2: pereaksi mana yang berubah pada ${pa}?`,h:'Bandingkan kolom [A] dan [B] kedua baris.',ok:`[${X}] berubah, pereaksi lain tetap.`},
+{t:'num',a:2,p:`STEP 3: [${X}] berubah berapa kali (faktor)?`,u:'×',h:'Bagi konsentrasi baris besar dengan baris kecil.',ok:'Konsentrasi naik 2×.'},
+{t:'num',a:fac*(X=='B'?4:2)/(X=='B'?1:1)>0?(X=='A'?2:4):0,p:`STEP 4: laju berubah berapa kali?`,u:'×',h:'Bagi laju baris besar dengan baris kecil.',ok:`Laju naik ${X=='A'?2:4}×.`},
+{t:'num',a:ord,p:`STEP 5: tentukan orde terhadap [${X}] (m atau n) dari 2ᵖ = ${X=='A'?2:4}.`,h:`Faktor konsentrasi 2 dipangkatkan orde = faktor laju.|2^${ord} = ${X=='A'?2:4}.`,ok:`Orde ${X} = ${ord}.`})});
+S_.push({t:'mc',o:['v = k[A][B]','v = k[A][B]²','v = k[A]²[B]','v = k[A]²[B]²'],a:1,p:'STEP 6: tentukan persamaan laju.',h:'Gunakan orde A = 1 dan orde B = 2.',ok:'v = k[A][B]²'},
+{t:'num',a:20,tol:.01,p:'STEP 7: hitung k (satuan M⁻²s⁻¹) dari percobaan 1.',u:'M⁻² s⁻¹',h:'k = v / ([A][B]²).|k = 0,02 / (0,10 × 0,10²) = 0,02 / 0,001.',ok:'k = 0,02 / (0,10 × 0,01) = 20 M⁻² s⁻¹.'});
+let i=0;const run=()=>{if(i>=S_.length){done('lab',50);return}const d=document.createElement('div');d.className='card';$('#sp',box).append(d);Q(S_[i],d,g=>{if(g){i++;run()}})};run()}
+function kcalc(box){box.innerHTML=`<h3>Kalkulator Konstanta Laju (k)</h3><p class="sm">Isi data, lalu lihat langkah perhitungannya.</p>${[['v','Laju (M/s)',0.02],['a','[A] (M)',0.1],['b','[B] (M)',0.1],['m','Orde A (m)',1],['n','Orde B (n)',2]].map(([id,l,v])=>`<label>${l} <input class="in" id="k${id}" value="${v}" style="width:90px"></label>`).join('')}<br><button class="btn" id="kb">Hitung langkah demi langkah</button><div id="ko" role="status"></div>`;
+$('#kb',box).onclick=()=>{const g=id=>parseFloat($('#k'+id,box).value.replace(',','.')),[v,a,b,m,n]=['v','a','b','m','n'].map(g);if([v,a,b,m,n].some(isNaN)||a<=0||b<=0)return $('#ko',box).textContent='Isi semua kolom dengan angka valid.';const d=a**m*b**n,k=v/d,o=m+n;
+$('#ko',box).innerHTML=`<p>1) v = k[A]<sup>${m}</sup>[B]<sup>${n}</sup><br>2) k = v / ([A]<sup>${m}</sup>[B]<sup>${n}</sup>)<br>3) k = ${v} / (${a}<sup>${m}</sup> × ${b}<sup>${n}</sup>) = ${v} / ${+d.toPrecision(4)}<br>4) <b>k = ${+k.toPrecision(4)} M<sup>${1-o}</sup> s<sup>−1</sup></b> (orde total ${o})</p>`;done('kcalc',30)}}
+
+// pages
+const P_={
+home(a){a.innerHTML=`<div class="hero"><canvas width="1200" height="520"></canvas><div class="in"><span class="tag">Selamat Datang di Reaksi Lab</span><h1>REAKSI <b>LAB</b></h1><p style="font-size:20px;margin:6px 0">Interactive Learning Environment for Reaction Rate</p><div class="tg">Amati. Eksperimen. Analisis. Jelaskan.</div><p>Jelajahi dunia laju reaksi melalui teori tumbukan, eksperimen virtual, simulasi partikel, grafik energi, dan analisis data eksperimen.</p><div class="row"><a class="btn" href="#/map">▶ MULAI BELAJAR</a><a class="btn w" href="#/map">LIHAT PETA BELAJAR</a></div></div></div><main><div class="grid">${[['📖','Materi Interaktif','Konsep dalam kartu singkat.'],['🧪','Simulasi & Eksperimen','Manipulasi variabel secara virtual.'],['🎮','Game Edukatif','Tantang dirimu.'],['📊','Analisis Data','Temukan pola dari data.'],['🏅','Progress & Badge','Pantau perkembanganmu.']].map(x=>`<div class="card"><div style="font-size:30px">${x[0]}</div><h3>${x[1]}</h3><p class="sm">${x[2]}</p></div>`).join('')}</div><h2 style="margin-top:28px">5 Modul Pembelajaran</h2>${mapHTML()}</main>`;
+sim($('canvas',a),()=>({n:45,v:.5,E:5}));},
+map(a){a.innerHTML=`<main><h2>PETA BELAJAR</h2><p class="sm">Ikuti alur: Materi → Eksplorasi → Aktivitas → Latihan → Feedback → Progress.</p>${mapHTML()}</main>`},
+m0(a){const m=document.createElement('main');a.append(m);m.append(head(0));m.append(sec(cards(MD[0].c)+'<div class="row"><button class="btn" id="rd">Tandai materi selesai (+10 XP)</button></div>'));$('#rd',m).onclick=()=>done('read1',10);
+const s=sec('<h3>Collision Simulator</h3><p class="sm">Atur jumlah, kecepatan, dan energi partikel. Amati hasil tiap tumbukan (aktivitas selesai setelah 10 tumbukan).</p><div id="s1"></div>');m.append(s);
+simUI($('#s1',s),[['jn','Jumlah partikel',2,40,16,1],['jv','Kecepatan',1,5,2,1],['je','Energi partikel',1,10,5,1]],v=>({n:v.jn,v:v.jv,E:v.je}),c=>c>=10&&done('sim',20));
+s.insertAdjacentHTML('beforeend','<p><b>Penjelasan:</b> tumbukan efektif butuh energi ≥ Ea <i>dan</i> orientasi tepat. Naikkan energi untuk memperbanyak tumbukan efektif.</p>');
+const g=sec('');m.append(g);coll(g);m.append(refs())},
+m1(a){const m=document.createElement('main');a.append(m);m.append(head(1));m.append(sec(cards(MD[1].c)));
+let s=sec('<span class="tag">A</span><h3>Konsentrasi</h3><p>Konsentrasi ↑ → partikel per volume ↑ → frekuensi tumbukan ↑ → tumbukan efektif ↑ → laju ↑.</p><div id="a1"></div><div id="a2" class="card"></div>');m.append(s);
+simUI($('#a1',s),[['cc','Konsentrasi (M)',1,6,2,1]],v=>({n:v.cc*8,v:2,E:7}));
+Q({t:'mc',p:'Apa yang terjadi terhadap frekuensi tumbukan ketika konsentrasi meningkat?',o:['Meningkat, karena partikel lebih rapat','Menurun, karena ruang penuh','Tetap, karena suhu tetap'],a:0,h:'Apa yang terjadi jika jumlah partikel dalam ruang yang sama bertambah?',ok:'Peningkatan konsentrasi meningkatkan frekuensi tumbukan sehingga peluang tumbukan efektif meningkat.',w:'Perhatikan hubungan jumlah partikel per satuan volume dan frekuensi tumbukan.',l:'#/m2'},$('#a2',s),g=>g&&done('conc',30));
+s=sec('<span class="tag">B</span><h3>Luas Permukaan</h3><p>Pilih bentuk zat dan lihat waktu reaksi (Data Simulasi).</p><div class="row" id="sb"></div><div class="bar" style="max-width:420px"><i id="sf" style="width:0"></i></div><p id="st" role="status" class="sm"></p><div id="b2" class="card"></div>');m.append(s);
+const F=[['Bongkahan','1×',60],['Kepingan','4×',30],['Serbuk','20×',6]],seen=new Set();
+F.forEach(([n,l,t])=>{const b=document.createElement('button');b.className='btn g';b.textContent=n;b.onclick=()=>{seen.add(n);const f=$('#sf',s);f.style.transition='none';f.style.width='0';f.offsetWidth;f.style.transition=`width ${t/10}s linear`;f.style.width='100%';$('#st',s).textContent=`${n}: luas permukaan relatif ${l}, waktu reaksi ${t} s.`};$('#sb',s).append(b)});
+Q({t:'fill',f:[F.map(x=>x[0]),F.map(x=>x[0]),F.map(x=>x[0])],a:[2,1,0],p:'Urutkan dari laju reaksi tercepat ke terlambat:',h:'Luas permukaan besar → lebih banyak partikel yang dapat ditumbuk.',ok:'Serbuk > kepingan > bongkahan: luas permukaan lebih besar memperbanyak tumbukan.',l:'#/m2'},$('#b2',s),g=>g&&done('surf',30));
+s=sec('<span class="tag">C</span><h3>Suhu</h3><p>Suhu ↑ → gerak partikel lebih cepat → lebih banyak tumbukan berenergi ≥ Ea.</p><div id="c1"></div><div id="c2" class="card"></div>');m.append(s);
+simUI($('#c1',s),[['ct','Suhu (°C)',20,60,20,10,'°C']],v=>({n:30,v:1+(v.ct-20)/20,E:2+(v.ct-20)/10*1.6}));
+const O=['Partikel bergerak lebih cepat','Jumlah partikel berkurang','Lebih banyak tumbukan berenergi ≥ Ea','Energi aktivasi turun'];
+Q({t:'fill',f:[O,O],a:[0,2],p:'Complete the causal chain: Suhu ↑ → [1] → [2] → Laju reaksi ↑',h:'Suhu memengaruhi energi kinetik partikel.|Setelah bergerak cepat, apa yang meningkat pada tumbukannya?',ok:'Suhu naik → gerak cepat → lebih banyak tumbukan efektif → laju naik.',l:'#/m2'},$('#c2',s),g=>g&&done('temp',30));
+s=sec('<span class="tag">D</span><h3>Katalis</h3><p>Katalis mempercepat reaksi lewat jalur alternatif berenergi aktivasi lebih rendah, tanpa habis bereaksi. <b>Ea turun, ΔH tidak berubah.</b></p><label><input type="checkbox" id="kt" checked> Tampilkan dengan katalis</label><div id="d1"></div><div id="d2" class="card"></div>');m.append(s);
+graph($('#d1',s));$('#kt',s).onchange=e=>$$('.cat',s).forEach(x=>x.style.display=e.target.checked?'':'none');
+Q({t:'mc',p:'Bagaimana pengaruh katalis terhadap ΔH?',o:['ΔH makin besar','ΔH tidak berubah','ΔH makin kecil'],a:1,h:'ΔH bergantung pada energi pereaksi dan produk. Apakah keduanya berubah di grafik?',ok:'Katalis hanya menurunkan Ea; energi pereaksi dan produk tetap, sehingga ΔH tetap.',l:'#/m3'},$('#d2',s),g=>g&&done('cat',30));m.append(refs())},
+m2(a){const m=document.createElement('main');a.append(m);m.append(head(2));m.append(sec(cards(MD[2].c)));const s=sec('<h3>Energy Profile Lab</h3><p>Klik bagian grafik sesuai tugas. Data Simulasi.</p><div id="g"></div>');m.append(s);graph($('#g',s),1);
+const q=sec('');m.append(q);Q({t:'mc',p:'Mengapa katalis mempercepat reaksi?',o:['Menaikkan suhu campuran','Menyediakan jalur dengan Ea lebih rendah sehingga lebih banyak tumbukan efektif','Menambah energi pereaksi'],a:1,h:'Bandingkan tinggi puncak kurva dengan dan tanpa katalis.',ok:'Ea lebih rendah → lebih banyak partikel memiliki energi cukup → tumbukan efektif ↑ → laju ↑.',l:'#/m3'},q,g=>g&&done('why',30));m.append(refs())},
+m3(a){const m=document.createElement('main');a.append(m);m.append(head(3));m.append(sec(cards(MD[3].c)+'<div class="row"><button class="btn" id="rd">Tandai materi selesai (+10 XP)</button></div>'));$('#rd',m).onclick=()=>done('read4',10);
+const x=sec('');m.append(x);match(x);const y=sec('');m.append(y);eqb(y);m.append(refs())},
+m4(a){const m=document.createElement('main');a.append(m);m.append(head(4));m.append(sec(cards(MD[4].c)));let s=sec('');m.append(s);lab(s);s=sec('');m.append(s);kcalc(s);m.append(refs())},
+lab(a){a.innerHTML=`<main><h2>Laboratorium Virtual</h2><div class="grid">${[['#/m0','Collision Simulator'],['#/m1','Concentration & Temperature Simulator'],['#/m2','Energy Profile Lab'],['#/m4','Experimental Data Lab & Kalkulator k']].map(x=>`<a class="card" href="${x[0]}"><h3>${x[1]}</h3><span class="sm">Buka →</span></a>`).join('')}</div></main>`},
+games(a){const m=document.createElement('main');a.append(m);m.append(sec('<h2>Games</h2>'));[coll,match,eqb].forEach(f=>{const s=sec('');m.append(s);f(s)})},
+detective(a){const m=document.createElement('main');a.append(m);const s=sec(`<h2>🔍 Reaction Rate Detective</h2><p>Sebuah industri ingin mempercepat suatu reaksi. Mereka mempertimbangkan peningkatan konsentrasi, ukuran partikel, suhu, dan katalis. Bantu mereka dengan format <b>CLAIM → EVIDENCE → REASONING</b>.</p><p class="sm">Data Simulasi: tanpa katalis Ea = 80 kJ, dengan katalis Ea = 50 kJ, ΔH = −40 kJ (tetap). Data orde: v = k[A][B]²; [B] naik 2× → laju naik 4×.</p>
+<p><b>1. CLAIM</b> — strategi yang dipilih:</p><select class="in" id="dc" aria-label="Klaim"><option value="">— pilih —</option><option>Tambah katalis</option><option>Naikkan konsentrasi B</option><option>Turunkan suhu</option></select>
+<p><b>2. EVIDENCE</b> — data pendukung:</p><select class="in" id="de" aria-label="Bukti"><option value="">— pilih —</option><option value="a">Ea turun dari 80 ke 50 kJ</option><option value="b">ΔH berubah dari −40 ke −10 kJ</option><option value="c">Laju tetap saat [B] naik</option></select>
+<p><b>3. REASONING</b> — jelaskan dengan teori tumbukan:</p><textarea class="in" id="dr" rows="4" style="width:100%" aria-label="Penalaran"></textarea><button class="btn" id="db">Periksa</button><div class="fb" id="df" role="status"></div>`);m.append(s);
+$('#db',s).onclick=()=>{const c=$('#dc',s).value,e=$('#de',s).value,r=$('#dr',s).value.toLowerCase(),L=[];
+if(!c||c=='Turunkan suhu')L.push('Klaim: pilih strategi yang benar-benar mempercepat reaksi (suhu turun justru memperlambat).');
+if(e!='a'&&c=='Tambah katalis')L.push('Bukti: katalis ditunjukkan oleh turunnya Ea, bukan perubahan ΔH.');
+if(c=='Naikkan konsentrasi B'&&e!='')L.push(e=='c'?'Bukti ini salah: laju justru naik 4×.':'Bukti untuk konsentrasi B adalah data orde (laju naik 4×), bukan Ea/ΔH.');
+if(!(r.includes('tumbukan')&&(r.includes('energi')||r.includes('frekuensi'))))L.push('Penalaran: kaitkan dengan tumbukan efektif, energi aktivasi atau frekuensi tumbukan.');
+const f=$('#df',s);if(L.length){f.className='fb bad';f.innerHTML='✗ Belum tepat.<br>'+L.join('<br>')}else{f.className='fb good';f.innerHTML='✓ Tepat! Klaim, bukti, dan penalaran konsisten.';done('detective',50)}};m.append(refs())},
+eval(a){const m=document.createElement('main');a.append(m);const s=sec('<h2>Evaluasi Akhir</h2><div id="ev"></div>');m.append(s);
+const B=[['Teori Tumbukan',{t:'mc',p:'Tumbukan efektif adalah tumbukan yang…',o:['Terjadi pada suhu rendah','Energinya ≥ Ea dan orientasinya tepat','Hanya melibatkan satu jenis partikel'],a:1,ok:'Efektif = energi cukup dan orientasi tepat.'}],
+['Katalis',{t:'mc',p:'Benar atau salah: katalis mengubah nilai ΔH reaksi.',o:['Benar','Salah'],a:1,ok:'Salah. Katalis hanya menurunkan Ea; ΔH tetap.'}],
+['Faktor Laju',{t:'mc',p:'Serbuk bereaksi lebih cepat daripada bongkahan karena…',o:['Ea lebih rendah','Luas permukaan lebih besar sehingga tumbukan lebih banyak','ΔH lebih negatif'],a:1,ok:'Luas permukaan lebih besar memperbanyak tumbukan.'}],
+['Faktor Laju',{t:'fill',f:[['Frekuensi tumbukan turun','Partikel bergerak lebih cepat'],['Laju turun','Laju naik']],a:[1,1],p:'Suhu ↑ → ____ → ____',ok:'Suhu naik → partikel lebih cepat → laju naik.'}],
+['Energi Aktivasi',{t:'num',p:'Ea tanpa katalis 80 kJ, dengan katalis 50 kJ. Berapa penurunan Ea (kJ)?',a:30,ok:'80 − 50 = 30 kJ.'}],
+['Hukum Laju',{t:'mc',p:'[A] naik 2× → laju naik 4×. Orde terhadap A:',o:['0','1','2'],a:2,ok:'2ᵐ = 4 → m = 2.'}],
+['Persamaan Laju',{t:'num',p:'Pada v = k[A][B]², berapa orde total?',a:3,ok:'1 + 2 = 3.'}],
+['Konstanta k',{t:'num',tol:.01,p:'v = 0,08 M/s; [A] = 0,1; [B] = 0,2; v = k[A][B]². Hitung k (M⁻² s⁻¹).',a:20,ok:'k = 0,08 / (0,1 × 0,04) = 20.'}]];
+let i=0,sc=0;const ok_=[],no_=[];const nx=()=>{const e=$('#ev',s);if(i>=B.length){const p=Math.round(sc/B.length*100);S.ev=p;sv();done('eval',p);e.innerHTML=`<h3>SKOR AKHIR: ${p}</h3><h3>PENGUASAAN KOMPETENSI</h3><div class="bar"><i style="width:${p}%"></i></div><p><b>Konsep yang sudah dikuasai:</b> ${ok_.join(', ')||'—'}</p><p><b>Konsep yang perlu dipelajari kembali:</b> ${no_.join(', ')||'—'}</p><a class="btn" href="#/progress">Lihat Progress</a>`;return}
+const d=document.createElement('div');e.innerHTML=`<p class="sm">Soal ${i+1} dari ${B.length}</p>`;e.append(d);const q={...B[i][1],once:1,l:'#/map'};Q(q,d,g=>{g?(sc++,ok_.push(B[i][0])):no_.push(B[i][0]);const b=document.createElement('button');b.className='btn';b.textContent='Lanjut';b.onclick=()=>{i++;nx()};d.append(b)})};nx();m.append(refs())},
+progress(a){const m=document.createElement('main');a.append(m);const dn=ACT.filter(x=>S.d[x]).length,B=[['Collision Explorer',mp(0)==1],['Reaction Investigator',mp(1)==1],['Energy Master',mp(2)==1],['Data Analyst',mp(4)==1],['Rate Law Expert',mp(3)==1],['Reaction Scientist',[0,1,2,3,4].every(i=>mp(i)==1)&&S.ev>=70]];
+m.append(sec(`<h2>Progress Belajar</h2>${MD.map((x,i)=>`<p>${x.t} — ${Math.round(mp(i)*100)}%</p><div class="bar"><i style="width:${mp(i)*100}%"></i></div>`).join('')}<div class="grid" style="margin-top:16px"><div class="card"><b>${dn}/${ACT.length}</b><br>aktivitas selesai</div><div class="card"><b>${S.xp} XP</b><br>skor</div><div class="card"><b>${S.ev==null?'—':S.ev}</b><br>hasil evaluasi</div></div><h3 style="margin-top:16px">Badge</h3><div>${B.map(b=>`<span class="chip" style="${b[1]?'':'opacity:.45'}">${b[1]?'🏅':'🔒'} ${b[0]}</span>`).join('')}</div><p><b>Modul belum selesai:</b> ${MD.filter((x,i)=>mp(i)<1).map(x=>x.t).join(', ')||'Semua selesai 🎉'}</p><button class="btn g" id="rs">Reset progress</button>`));$('#rs',m).onclick=()=>{S={xp:0,d:{},ev:null};sv();route()}}};
+
+const sh=a=>a.map(x=>[Math.random(),x]).sort((x,y)=>x[0]-y[0]).map(x=>x[1]),pk=a=>a[Math.floor(Math.random()*a.length)],ri=(a,b)=>a+Math.floor(Math.random()*(b-a+1));
+const fm=x=>String(+x.toPrecision(6)).replace('.',','),SP=['⁰','¹','²','³'];
+const eq=(m,n)=>'v = k'+(m?'[A]'+(m>1?SP[m]:''):'')+(n?'[B]'+(n>1?SP[n]:''):'');
+const mc=(p,r,w,ok,l)=>{const o=sh([r,...w]);return{t:'mc',p,o,a:o.indexOf(r),ok,l,once:1}};
+const dat=()=>{const m=ri(0,2),n=ri(0,2),k=pk([1,2,5,10,20,50]),a=pk([.1,.2,.5]),b=pk([.1,.2,.5]),r=[[a,b],[2*a,b],[a,2*b]].map(([x,y])=>[x,y,k*x**m*y**n]);
+return{m,n,k,a,b,v:r[0][2],tb:'<table class="tb"><tr><th>Perc.</th><th>[A] (M)</th><th>[B] (M)</th><th>Laju (M/s)</th></tr>'+r.map((x,i)=>'<tr><td>'+(i+1)+'</td>'+x.map(y=>'<td>'+fm(y)+'</td>').join('')+'</tr>').join('')+'</table><span class="sm">Data Simulasi</span><br>'}};
+const G={
+'Teori Tumbukan':[()=>{const e=pk([1,0]),o=pk([1,0]),g=e&&o;return mc(`Dua partikel bertumbukan dengan energi ${e?'≥':'<'} Ea dan orientasi ${o?'tepat':'salah'}. Hasilnya?`,g?'Efektif: reaksi terjadi':'Tidak efektif: partikel hanya memantul',[g?'Tidak efektif: partikel hanya memantul':'Efektif: reaksi terjadi'],'Tumbukan efektif membutuhkan energi ≥ Ea dan orientasi tepat.','#/m0')},
+()=>mc('Pernyataan yang benar tentang teori tumbukan:','Hanya tumbukan dengan energi cukup dan orientasi tepat yang menghasilkan reaksi',['Semua tumbukan menghasilkan reaksi','Reaksi terjadi tanpa tumbukan jika suhu tinggi'],'Tidak semua tumbukan efektif.','#/m0')],
+'Faktor Laju':[()=>{const a=pk([.5,1,2]),f=pk([2,3,4]);return mc(`Konsentrasi A dinaikkan dari ${fm(a)} M menjadi ${fm(a*f)} M (volume tetap). Frekuensi tumbukan…`,'meningkat, karena partikel per volume bertambah',['menurun','tetap'],'Konsentrasi ↑ → partikel per volume ↑ → tumbukan lebih sering.','#/m1')},
+()=>{const F=['Bongkahan','Kepingan','Serbuk'],i=ri(0,1),j=ri(i+1,2),[x,y]=Math.random()<.5?[i,j]:[j,i];return mc(`Massa dan kondisi sama. Mana yang bereaksi lebih cepat: ${F[x]} atau ${F[y]}?`,F[j],[F[i],'Sama cepat'],'Luas permukaan lebih besar → lebih banyak tumbukan.','#/m1')},
+()=>{const t=pk([20,30,40]),u=t+pk([10,20]);return mc(`Suhu dinaikkan dari ${t}°C ke ${u}°C. Jumlah partikel berenergi ≥ Ea…`,'bertambah',['berkurang','tetap'],'Suhu naik → energi kinetik rata-rata naik → tumbukan efektif lebih banyak.','#/m1')}],
+'Energi Aktivasi':[()=>{const a=ri(6,12)*10,b=a-ri(2,5)*10;return{t:'num',p:`Ea tanpa katalis ${a} kJ, dengan katalis ${b} kJ. Berapa penurunan Ea (kJ)?`,a:a-b,ok:`${a} − ${b} = ${a-b} kJ.`,once:1,l:'#/m2'}},
+()=>{const r=ri(2,8)*10,p=pk([1,3,5,9,10,11].map(x=>x*10).filter(x=>x!=r));return{t:'num',p:`Energi pereaksi ${r} kJ, energi produk ${p} kJ. Berapa ΔH (kJ, beri tanda − bila negatif)?`,a:p-r,ok:`ΔH = E produk − E pereaksi = ${p} − ${r} = ${p-r} kJ.`,once:1,l:'#/m2'}},
+()=>{const r=ri(2,8)*10,t=r+ri(3,8)*10;return{t:'num',p:`Energi pereaksi ${r} kJ, energi puncak ${t} kJ. Berapa Ea (kJ)?`,a:t-r,ok:`Ea = ${t} − ${r} = ${t-r} kJ.`,once:1,l:'#/m2'}}],
+'Katalis':[()=>{const S=[['menurunkan energi aktivasi',1],['mengubah nilai ΔH reaksi',0],['menyediakan jalur reaksi alternatif',1],['menaikkan energi kinetik partikel',0],['ikut habis bereaksi secara permanen',0],['membuat produk berenergi lebih rendah',0]],[x,y]=pk(S);return mc(`Benar atau salah: katalis ${x}.`,y?'Benar':'Salah',[y?'Salah':'Benar'],y?'Benar: ini ciri katalis.':'Salah: katalis hanya menurunkan Ea; ΔH tetap.','#/m3')},
+()=>{const a=ri(7,12)*10;return mc(`Katalis menurunkan Ea dari ${a} ke ${a-ri(2,4)*10} kJ. ΔH reaksi…`,'tetap',['ikut turun','naik'],'ΔH hanya bergantung pada energi pereaksi dan produk.','#/m3')}],
+'Hukum Laju':[()=>{const m=ri(0,2),f=pk([2,3,4]);return{t:'num',p:`[A] naik ${f}× (B tetap), laju menjadi ${fm(f**m)}×. Berapa orde terhadap A?`,a:m,ok:`${f}ᵐ = ${f**m} → m = ${m}.`,once:1,l:'#/m3'}},
+()=>{const m=ri(0,2),f=pk([2,3,4]);return{t:'num',p:`Reaksi berorde ${m} terhadap A. Jika [A] naik ${f}×, laju naik berapa kali?`,a:f**m,ok:`${f}^${m} = ${f**m}×.`,once:1,l:'#/m3'}}],
+'Orde':[()=>{const d=dat(),w=pk(['A','B','total']);return{t:'num',p:d.tb+`Tentukan orde ${w=='total'?'total':'terhadap '+w}.`,a:w=='A'?d.m:w=='B'?d.n:d.m+d.n,ok:`Bandingkan perc. 1–2 (hanya [A] berubah) untuk m dan perc. 1–3 untuk n. Hasil: m = ${d.m}, n = ${d.n}.`,once:1,l:'#/m4'}}],
+'Persamaan':[()=>{const d=dat(),r=eq(d.m,d.n),W=[...new Set([[d.m,d.n],[2-d.m,d.n],[d.m,2-d.n],[d.n,d.m],[1,1],[2,2],[0,1]].map(x=>eq(...x)).filter(x=>x!=r))];return mc(d.tb+'Tentukan persamaan laju:',r,sh(W).slice(0,3),`m = ${d.m}, n = ${d.n} → ${r}.`,'#/m4')}],
+'Konstanta k':[()=>{const d=dat();return{t:'num',tol:d.k*.01,p:d.tb+`Persamaan laju: ${eq(d.m,d.n)}. Hitung k dari percobaan 1 (satuan M^(${1-d.m-d.n}) s⁻¹).`,a:d.k,ok:`k = ${fm(d.v)} / (${fm(d.a)}^${d.m} × ${fm(d.b)}^${d.n}) = ${d.k}.`,once:1,l:'#/m4'}}]};
+P_.eval=function(a){const m=document.createElement('main');a.append(m);const s=sec('<h2>Evaluasi Akhir</h2><p class="sm">10 soal acak. Angka dan konteks berbeda pada setiap percobaan.</p><div id="ev"></div>');m.append(s);
+const T=Object.keys(G),run=()=>{const B=T.concat(['Orde','Persamaan','Konstanta k','Hukum Laju'].sort(()=>Math.random()-.5).slice(0,2)).map(t=>[t,pk(G[t])()]);let i=0,sc=0;const ok_=new Set(),no_=new Set();
+const nx=()=>{const e=$('#ev',s);if(i>=B.length){const p=Math.round(sc/B.length*100);S.ev=Math.max(S.ev||0,p);sv();done('eval',p);e.innerHTML=`<h3>SKOR AKHIR: ${p}</h3><h3>PENGUASAAN KOMPETENSI</h3><div class="bar"><i style="width:${p}%"></i></div><p><b>Konsep yang sudah dikuasai:</b> ${[...ok_].filter(x=>!no_.has(x)).join(', ')||'—'}</p><p><b>Konsep yang perlu dipelajari kembali:</b> ${[...no_].join(', ')||'—'}</p><div class="row"><button class="btn" id="re">Ulangi dengan soal baru</button><a class="btn g" href="#/progress">Lihat Progress</a></div>`;$('#re',e).onclick=run;return}
+const d=document.createElement('div');e.innerHTML=`<p class="sm">Soal ${i+1} dari ${B.length} · ${B[i][0]}</p>`;e.append(d);Q(B[i][1],d,g=>{g?(sc++,ok_.add(B[i][0])):no_.add(B[i][0]);const b=document.createElement('button');b.className='btn';b.textContent=i+1<B.length?'Lanjut':'Lihat Hasil';b.onclick=()=>{i++;nx()};d.append(b)})};nx()};run();m.append(refs())};
+function mapHTML(){return`<div class="grid">${MD.map((x,i)=>`<div class="card"><div style="font-size:28px">${x.i}</div><span class="tag">MODUL 0${i+1}</span><h3>${x.t}</h3><p class="sm">${x.d}</p><div class="bar"><i style="width:${mp(i)*100}%"></i></div><p class="sm">${st(mp(i))}</p><a class="btn" href="#/m${i}">Mulai</a></div>`).join('')}</div>`}
+const NAV=[['home','Beranda'],['map','Materi'],['lab','Laboratorium Virtual'],['games','Games'],['detective','Reaction Rate Detective'],['eval','Evaluasi'],['progress','Progress']];
+$('#lk').innerHTML=NAV.map(n=>`<a href="#/${n[0]}">${n[1]}</a>`).join('');
+$('#hb').onclick=()=>$('#lk').classList.toggle('open');
+function route(){const k=(location.hash||'#/home').slice(2),a=$('#app');a.innerHTML='';(P_[k]||P_.home)(a);$$('#lk a').forEach(l=>l.classList.toggle('on',l.getAttribute('href')=='#/'+k||(k=='m'+k[1]&&l.getAttribute('href')=='#/map')));$('#lk').classList.remove('open');scrollTo(0,0)}
+addEventListener('hashchange',route);route();
+</script></body></html>
